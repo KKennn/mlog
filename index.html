@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MLOG Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="home-card" id="camping">
+            <div class="home-card-title">
+                Catskills Camping
+            </div>
+        </div>
+
+        <div class="home-card" id="halloween">
+            <div class="home-card-title">
+                Halloween Parade
+            </div>
+        </div>
+
+        <div class="home-card" id="gathering">
+            <div class="home-card-title">
+                Weekend Gathering
+            </div>
+        </div>
+
+    </div>
+    <a id="myBtn">
+        <div id="home-add-button">
+            <p style="font-size: 48px;margin: 0;line-height: 40px;">+</p>
+            <p style="font-size: 16px;margin: 0;">new memory</p>
+        </div>
+    </a>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <!-- <span class="close">&times;</span> -->
+            <div>
+                <form action="/action_page.php">
+                    <label for="fname">Title</label>
+                    <input type="text" id="fname" name="firstname" placeholder="What is this memory about">
+
+                    <label for="lname">Date</label>
+                    <input type="date" name="dateofbirth" id="dateofbirth">
+                    </select>
+
+                    <label for="img">Choose photos</label><br>
+
+
+
+                    <label for="file-upload" class="custom-file-upload">
+                      <b class="fa fa-cloud-upload">Select photos for this memory</b>
+                    </label>
+                    <input id="file-upload" type="file" multiple/>
+                    <div class="hline"></div>
+                    <a href="memory.html">
+                        <div id="new-next-button">
+                            <p id="new-next-button-text">
+                                Next >
+                            </p>
+                        </div>
+                    </a>
+
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

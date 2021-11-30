@@ -1,0 +1,261 @@
+body {
+    background: white;
+    font-family: Avenir;
+    margin: 0px;
+}
+
+#container {
+    background: white;
+    height: 100vh;
+    margin: 16px auto;
+    max-width: 480px;
+}
+
+.container {
+    background: white;
+    height: 100vh;
+    margin: 16px auto;
+    max-width: 480px;
+}
+
+.home-card {
+    height: 200px;
+    margin: 12px;
+    background: lightslategrey;
+    border-radius: 4px;
+}
+
+.home-card-title {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#home-add-button {
+    background: chocolate;
+    text-align: center;
+    width: 96px;
+    color: white;
+    margin: 0 auto;
+    bottom: 160px;
+    position: relative;
+    padding: 8px;
+}
+
+#home-add-button:hover {
+    background: coral;
+}
+
+#camping {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("media/camping.jpg");
+}
+
+#halloween {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("media/halloween.jpg");
+}
+
+#gathering {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("media/gathering.jpg");
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    bottom: 0px;
+    position: absolute;
+    /* 15% from the top and centered */
+    padding: 5%;
+    border: 1px solid #888;
+    width: 90%;
+    /* Could be more or less, depending on screen size */
+}
+
+::-webkit-file-upload-button {
+    display: none;
+}
+
+::-webkit-textfield-decoration-container {
+    display: none;
+}
+
+::file-selector-button {
+    display: none;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#new-next {
+    width: 80%;
+    /* margin: 8px; */
+    margin-top: 24px;
+    padding: 16px 10%;
+    background: lightsalmon;
+    color: white;
+    text-align: center;
+}
+
+.tile-container {
+    display: flex;
+    width: 100%;
+}
+
+.tile {
+    flex: 1;
+    margin: 32px 0;
+    transition: ease .3s;
+    background: black;
+    margin: 16px;
+    height: 200px;
+    position: relative;
+    border-radius: 4px;
+    width: 50%;
+}
+
+.write-button {
+    background: grey;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 8px 0 4px 0;
+}
+
+.group-title {
+    color: white;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    margin: 0px;
+}
+
+.group-count {
+    color: white;
+    position: absolute;
+    top: 36px;
+    left: 12px;
+    margin: 0px;
+    font-size: 12px;
+}
+
+input[type="file"] {
+    /* display: none; */
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 12px 12px;
+    cursor: pointer;
+    background: lightgoldenrodyellow;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+#new-next-button {
+    background: lightgoldenrodyellow;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#new-next-button-text {
+    padding: 12px 15px;
+}
+
+.hline {
+    width: 100%;
+    background: lightgrey;
+    height: 1px;
+    margin: 24px 0;
+}
