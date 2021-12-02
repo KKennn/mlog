@@ -1,3 +1,15 @@
+for (let k = 1; k <= 15; k++) {
+    var img = document.createElement('div');
+    img.setAttribute('class', 'item');
+    img.setAttribute('draggable', 'true');
+    img.style.width = '72px';
+    img.style.height = '72px';
+    img.style.backgroundImage = 'url(media/0' + k + '.jpg)';
+    img.style.backgroundSize = 'cover';
+    var container = document.getElementsByClassName('gridscroll');
+    container[parseInt((k - 1) / 3)].appendChild(img);
+}
+
 // select the item element
 const items = document.querySelectorAll('.item');
 
@@ -51,7 +63,9 @@ function drop(e) {
     const draggable = document.getElementById(id);
 
     // add it to the drop target
-    e.target.appendChild(draggable);
+    if (e.target.classList.contains("box")) {
+        e.target.appendChild(draggable);
+    }
 
     // display the draggable element
     draggable.classList.remove('hide');
