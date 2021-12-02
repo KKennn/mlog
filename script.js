@@ -86,3 +86,7 @@ tile.onclick = function() {
 function showDiv() {
     document.querySelector('.ask-input').style.display = "block";
 }
+
+function hideDiv() {
+    document.querySelector('.ask-input').style.display = "none";
+}

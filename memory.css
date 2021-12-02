@@ -1,5 +1,11 @@
 /* The Modal (background) */
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 .modal {
     display: none;
     /* Hidden by default */
@@ -52,7 +58,7 @@
 }
 
 .ask-input {
-    background: grey;
+    background: white;
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -61,4 +67,108 @@
     margin: 0px;
     left: 0px;
     display: none;
+}
+
+.write-box {
+    margin: 20px;
+}
+
+textarea {
+    border: 1px solid #999999;
+    width: 100%;
+    margin: 5px 0;
+    padding: 12px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    border-radius: 4px;
+}
+
+.write-done {
+    background: lightgrey;
+    height: 48px;
+    padding: 24px auto;
+    margin-right: 20px;
+    margin-left: auto;
+    width: 62px;
+    text-align: center;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    font-size: 16px;
+}
+
+.write-done-text {
+    vertical-align: middle;
+}
+
+.scroll-container {
+    overflow: scroll;
+    white-space: nowrap;
+    padding: 12px;
+    padding-right: 80px;
+    height: 96px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    background: #888;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.gridscroll {
+    display: inline-block;
+    overflow-y: hidden;
+    height: 72px;
+}
+
+.scroll-container img {
+    margin-right: 8px;
+    /* flex: 1; */
+    transition: ease .3s;
+    position: relative;
+    border-radius: 4px;
+    flex-direction: row;
+    width: 72px;
+    height: 72px;
+    display: inline-block;
+}
+
+.write {
+    background: black;
+    position: absolute;
+    height: 96px;
+    width: 80px;
+    right: 0px;
+    top: 0px;
+}
+
+.write-text {
+    color: white;
+    text-align: center;
+    height: auto;
+    margin-top: 12px;
+}
+
+.draggable {
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+
+.dropped {
+    position: static !important;
+}
+
+.hide {
+    display: none;
+}
+
+.drag-over {
+    box-shadow: 0px 6px 12px #000000;
 }
