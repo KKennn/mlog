@@ -9,8 +9,29 @@
 </head>
 
 <body>
-    <div id="container">
-        <div class="home-card" id="camping">
+    <div class="container">
+        <div class="header">
+            <img src="media/logo.svg" class="logo">
+        </div>
+        <p class="slogan">NEW WAY OF </p>
+        <p class="slogan-b">Memory</p>
+        <p class="subtitle">Have lots of photos after a memorable event?</p>
+        <p class="subtitle">Upload them here to make a unique <span class="orange">Memory Log</span></p>
+        <!-- <a id="myBtn"> -->
+        <!-- <div id="home-add-button">
+            <img class="icon-s" src="media/upload.svg">
+            <p>Select photos for this memory</p>
+
+        </div> -->
+
+
+        <!-- </a> -->
+        <label for="file-upload" id="home-add-button">
+            <img class="icon-s" src="media/upload.svg">
+            <p class="fa fa-cloud-upload">Select photos for a memory</p>
+          </label>
+        <input id="file-upload" type="file" multiple/>
+        <!-- <div class="home-card" id="camping">
             <div class="home-card-title">
                 Catskills Camping
             </div>
@@ -26,15 +47,10 @@
             <div class="home-card-title">
                 Weekend Gathering
             </div>
-        </div>
+        </div> -->
 
     </div>
-    <a id="myBtn">
-        <div id="home-add-button">
-            <p style="font-size: 48px;margin: 0;line-height: 40px;">+</p>
-            <p style="font-size: 16px;margin: 0;">new memory</p>
-        </div>
-    </a>
+
 
 
     <!-- The Modal -->

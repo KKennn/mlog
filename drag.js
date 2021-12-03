@@ -44,30 +44,48 @@ boxes.forEach(box => {
 
 function dragEnter(e) {
     e.preventDefault();
-    e.target.classList.add('drag-over');
+    if (e.target.classList.contains("box")) e.target.classList.add('drag-over');
+    if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.add('drag-over');
+    if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.add('drag-over');
 }
 
 function dragOver(e) {
     e.preventDefault();
-    e.target.classList.add('drag-over');
+    if (e.target.classList.contains("box")) e.target.classList.add('drag-over');
+    if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.add('drag-over');
+    if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.add('drag-over');
 }
 
 function dragLeave(e) {
-    e.target.classList.remove('drag-over');
+    if (e.target.classList.contains("box")) e.target.classList.remove('drag-over');
+    if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.remove('drag-over');
+    if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.remove('drag-over');
 }
 
 function drop(e) {
-    e.target.classList.remove('drag-over');
+    if (e.target.classList.contains("box")) e.target.classList.remove('drag-over');
+    if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.remove('drag-over');
+    if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.remove('drag-over');
     // get the draggable element
     const id = e.dataTransfer.getData('text/plain');
     const draggable = document.getElementById(id);
-
+    console.log(e.target);
     // add it to the drop target
-    if (e.target.classList.contains("box")) {
-        e.target.appendChild(draggable);
-    }
-
+    if (e.target.classList.contains("box")) e.target.children[0].appendChild(draggable);
+    if (e.target.classList.contains("gridscroll")) e.target.appendChild(draggable);
+    if (e.target.classList.contains("item")) e.target.parentElement.appendChild(draggable);
     // display the draggable element
     draggable.classList.remove('hide');
 
 }
+
+$('textarea').autoResize();
+
+var logBtns = document.getElementsByClassName("write");
+var logModal = document.querySelector(".ask-input");
+console.log(logBtns);
+logBtns.forEach(logBtn => {
+    logBtn.onclick = function() {
+        logModal.style.display = "block";
+    }
+})

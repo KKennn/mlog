@@ -1,23 +1,23 @@
 body {
-    background: white;
+    background: #262321;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     box-sizing: border-box;
+    color: #FEFBF9;
+    font-size: 16px;
 }
 
 #container {
-    background: white;
     height: 100vh;
     width: 100vw;
     margin: 16px auto;
-    max-width: 480px;
+    max-width: 720px;
 }
 
 .container {
-    background: white;
     height: 100vh;
-    margin: 16px auto;
-    max-width: 480px;
+    margin: 20px 20px;
+    max-width: 720px;
 }
 
 .home-card {
@@ -28,7 +28,6 @@ body {
 }
 
 .home-card-title {
-    color: white;
     text-align: center;
     vertical-align: middle;
     line-height: 200px;
@@ -37,18 +36,29 @@ body {
 }
 
 #home-add-button {
-    background: chocolate;
+    display: flex;
+    background: #E57510;
     text-align: center;
-    width: 96px;
-    color: white;
     margin: 0 auto;
-    bottom: 160px;
-    position: relative;
-    padding: 8px;
+    padding: 8px 24px;
+    width: fit-content;
+    border-radius: 8px;
+    vertical-align: middle;
+    margin-top: 64px;
+}
+
+.orange {
+    color: #E57510;
+}
+
+.icon-s {
+    width: 20px;
+    margin-right: 12px;
+    fill: #FEFBF9;
 }
 
 #home-add-button:hover {
-    background: coral;
+    background: #E98A34;
 }
 
 #camping {
@@ -231,7 +241,7 @@ input[type=submit]:hover {
 }
 
 input[type="file"] {
-    /* display: none; */
+    display: none;
 }
 
 .custom-file-upload {
@@ -239,13 +249,13 @@ input[type="file"] {
     display: inline-block;
     padding: 12px 12px;
     cursor: pointer;
-    background: lightgoldenrodyellow;
+    background: grey;
     border-radius: 4px;
     margin-top: 8px;
 }
 
 #new-next-button {
-    background: lightgoldenrodyellow;
+    background: grey;
     width: fit-content;
     margin-left: auto;
     margin-right: 0;
@@ -260,4 +270,42 @@ input[type="file"] {
     background: lightgrey;
     height: 1px;
     margin: 24px 0;
+}
+
+.logo {
+    width: 120px;
+    margin: 12px auto;
+}
+
+.header {
+    width: 100%;
+    padding: 0 auto;
+    text-align: center;
+}
+
+.slogan {
+    /* text-align: center; */
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 0px;
+    margin-top: 36px;
+    margin-left: 24px;
+}
+
+.slogan-b {
+    font-family: SignPainter;
+    font-size: 96px;
+    margin-top: -28px;
+    color: #E57510;
+    margin-left: 24px;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bolder;
 }
