@@ -34,7 +34,7 @@
     background-color: #fefefe;
     margin: 15% auto;
     /* 15% from the top and centered */
-    padding: 20px;
+    padding: 12px;
     border: 1px solid #888;
     width: 80%;
     /* Could be more or less, depending on screen size */
@@ -58,7 +58,7 @@
 }
 
 .ask-input {
-    background: white;
+    background: #262321;
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -70,39 +70,44 @@
 }
 
 .write-box {
-    margin: 20px;
+    margin: 12px;
 }
 
 textarea {
-    border: 1px solid #999999;
     width: 100%;
     margin: 5px 0;
-    padding: 12px;
+    padding: 8px 12px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 24px;
+    line-height: 22px;
     border-radius: 4px;
+    background: rgba(254, 251, 249, .15);
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 0px;
+    color: #FEFBF9;
 }
 
 .write-done {
-    background: lightgrey;
+    background: #E57510;
     /* height: 48px; */
-    padding: 24px 48px;
-    margin-right: 20px;
+    padding: 12px 48px;
+    margin-right: 12px;
     margin-left: auto;
     width: 64px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     cursor: pointer;
 }
 
 .write-done-text {
-    height: auto;
-    text-align: center;
+    height: fit-content;
     width: fit-content;
+    text-align: center;
 }
 
 .scroll-container {
@@ -119,10 +124,10 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-evenly; */
-    background: #888;
+    background: rgba(254, 251, 249, .15);
     border-radius: 4px;
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     display: inline-block;
     overflow-y: hidden;
 }
@@ -194,4 +199,15 @@ textarea {
     resize: none;
     outline: none;
     overflow: auto;
+}
+
+.instruction-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.instruction {
+    margin-top: 8px;
+    opacity: .3;
 }
