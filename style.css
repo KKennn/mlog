@@ -44,7 +44,7 @@ body {
     width: fit-content;
     border-radius: 8px;
     vertical-align: middle;
-    margin-top: 64px;
+    margin-top: 48px;
 }
 
 .orange {
@@ -284,7 +284,7 @@ input[type="file"] {
 }
 
 .slogan {
-    /* text-align: center; */
+    text-align: center;
     font-size: 36px;
     font-weight: 900;
     margin-bottom: 0px;
@@ -293,19 +293,20 @@ input[type="file"] {
 }
 
 .slogan-b {
-    font-family: SignPainter;
-    font-size: 96px;
-    margin-top: -28px;
+    /* font-family: 'Smooch', cursive; */
+    font-size: 72px;
+    margin-top: 0px;
     color: #E57510;
     margin-left: 24px;
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 36px;
+    font-weight: bolder;
 }
 
 .subtitle {
     text-align: center;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
     font-size: 18px;
     font-weight: bolder;
 }
