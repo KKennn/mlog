@@ -44,7 +44,7 @@ body {
     width: fit-content;
     border-radius: 8px;
     vertical-align: middle;
-    margin-top: 48px;
+    margin-top: 36px;
 }
 
 .orange {
@@ -285,11 +285,11 @@ input[type="file"] {
 
 .slogan {
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 900;
     margin-bottom: 0px;
     margin-top: 36px;
-    margin-left: 24px;
+    /* margin-left: 24px; */
 }
 
 .slogan-b {
@@ -297,16 +297,16 @@ input[type="file"] {
     font-size: 72px;
     margin-top: 0px;
     color: #E57510;
-    margin-left: 24px;
+    /* margin-left: 24px; */
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
     font-weight: bolder;
 }
 
 .subtitle {
     text-align: center;
-    margin-left: 8px;
-    margin-right: 8px;
-    font-size: 18px;
-    font-weight: bolder;
+    /* margin-left: 8px; */
+    /* margin-right: 8px; */
+    /* font-size: 18px; */
+    font-weight: 400;
 }
