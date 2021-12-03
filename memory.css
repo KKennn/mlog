@@ -62,7 +62,7 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: 5;
+    z-index: 7;
     top: 0;
     margin: 0px;
     left: 0px;
@@ -152,7 +152,6 @@ textarea {
 }
 
 .write {
-    background: black;
     position: absolute;
     height: 96px;
     width: 80px;
@@ -163,10 +162,29 @@ textarea {
 }
 
 .write-text {
-    color: white;
     text-align: center;
     height: auto;
     margin-top: 12px;
+    position: absolute;
+    bottom: -4px;
+    right: 20px;
+    color: #FEFBF9;
+    z-index: 6;
+    opacity: .8;
+}
+
+.write-icon {
+    width: 32px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    z-index: 6;
+    opacity: .8;
+}
+
+polygon {
+    /* opacity: .7; */
+    fill: #E98A34;
 }
 
 .draggable {

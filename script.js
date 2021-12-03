@@ -1,3 +1,19 @@
+var userData = [];
+var saveData = document.getElementById("input");
+console.log(userData);
+
+function showDiv() {
+    document.querySelector('.ask-input').style.display = "block";
+}
+
+function hideDiv() {
+    document.querySelector('.ask-input').style.display = "none";
+    userData.push(saveData.value);
+    console.log(userData);
+    // var input = document.getElementById("input").value;
+    saveData.value = "";
+}
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -82,17 +98,3 @@ tile.onclick = function() {
 //         modal.style.display = "none";
 //     }
 // }
-
-var userData = [];
-var saveData = document.getElementById("input");
-
-function showDiv() {
-    document.querySelector('.ask-input').style.display = "block";
-}
-
-function hideDiv() {
-    document.querySelector('.ask-input').style.display = "none";
-    userData.push(saveData.value);
-    console.log(userData);
-    // var input = document.getElementById("input").value;
-}
