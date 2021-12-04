@@ -79,13 +79,11 @@ function drop(e) {
 
 }
 
-$('textarea').autoResize();
-
-var logBtns = document.getElementsByClassName("write");
-var logModal = document.querySelector(".ask-input");
-console.log(logBtns);
-logBtns.forEach(logBtn => {
-    logBtn.onclick = function() {
-        logModal.style.display = "block";
-    }
-})
+// var logBtns = document.getElementsByClassName("write");
+// var logModal = document.querySelector(".ask-input");
+// console.log(logBtns);
+// logBtns.forEach(logBtn => {
+//     logBtn.onclick = function() {
+//         logModal.style.display = "block";
+//     }
+// })

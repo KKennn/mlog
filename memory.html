@@ -12,60 +12,76 @@
 <body>
     <div class="container">
         <p class="instruction-title">Your photos are put into groups</p>
-        <p class="instruction">You can drag photos between groups and log some memories in each group.</p>
+        <p class="instruction">You can drag photos between groups and log some memories in each group. After logging in every group you can make your Mlog!</p>
 
         <div class="drop-targets">
+
             <div class="scroll-container box">
                 <div class="gridscroll"></div>
-                <svg height="96" width="96" class="write" onclick="showDiv()">
+                <div id="group1" onclick="showDiv(this.id)">
+                    <svg height="96" width="96" class="write">
                     <polygon points="30,0 96,0 96,96 0,96" />
                     </svg>
-                <p class="write-text">Log</p>
-                <img src="media/log.svg" class="write-icon">
+                    <p class="write-text">Log</p>
+                    <img src="media/log.svg" class="write-icon">
+                </div>
             </div>
 
             <div class="scroll-container box">
                 <div class="gridscroll"></div>
-                <svg height="96" width="96" class="write" onclick="showDiv()">
+                <div id="group2" onclick="showDiv(this.id)">
+                    <svg height="96" width="96" class="write">
                     <polygon points="30,0 96,0 96,96 0,96" />
                     </svg>
-                <p class="write-text">Log</p>
-                <img src="media/log.svg" class="write-icon">
+                    <p class="write-text">Log</p>
+                    <img src="media/log.svg" class="write-icon">
+                </div>
             </div>
 
             <div class="scroll-container box">
                 <div class="gridscroll"></div>
-                <svg height="96" width="96" class="write" onclick="showDiv()">
+                <div id="group3" onclick="showDiv(this.id)">
+                    <svg height="96" width="96" class="write">
                     <polygon points="30,0 96,0 96,96 0,96" />
                     </svg>
-                <p class="write-text">Log</p>
-                <img src="media/log.svg" class="write-icon">
+                    <p class="write-text">Log</p>
+                    <img src="media/log.svg" class="write-icon">
+                </div>
             </div>
 
             <div class="scroll-container box">
                 <div class="gridscroll"></div>
-                <svg height="96" width="96" class="write" onclick="showDiv()">
+                <div id="group4" onclick="showDiv(this.id)">
+                    <svg height="96" width="96" class="write">
                     <polygon points="30,0 96,0 96,96 0,96" />
                     </svg>
-                <p class="write-text">Log</p>
-                <img src="media/log.svg" class="write-icon">
+                    <p class="write-text">Log</p>
+                    <img src="media/log.svg" class="write-icon">
+                </div>
             </div>
 
             <div class="scroll-container box">
                 <div class="gridscroll"></div>
-                <svg height="96" width="96" class="write" onclick="showDiv()">
-                    <polygon points="30,0 96,0 96,96 0,96"/>
+                <div id="group5" onclick="showDiv(this.id)">
+                    <svg height="96" width="96" class="write">
+                    <polygon points="30,0 96,0 96,96 0,96" />
                     </svg>
-                <p class="write-text">Log</p>
-                <img src="media/log.svg" class="write-icon">
+                    <p class="write-text">Log</p>
+                    <img src="media/log.svg" class="write-icon">
+                </div>
             </div>
+
+
 
         </div>
 
 
         <div class="ask-input">
-            <div class="write-done" onclick="hideDiv()">
+            <!-- <div class="write-done" onclick="hideDiv()">
                 <div class="write-done-text">Done</div>
+            </div> -->
+            <div class="done-button" onclick="hideDiv()">
+                <p class="done-text">Done</p>
             </div>
             <div class="write-box">
                 <textarea id="input" name="message" rows="10" cols="30" placeholder="Log some memories …
@@ -76,7 +92,17 @@ Inspo: "></textarea>
 
 
 
-        <a href="index.html">back</a>
+
+
+        <a href="index.html" class="back">Go back</a>
+        <div class="space"></div>
+    </div>
+    <div class="next-step">
+        <a href="mlog.html">
+            <div class="done-button">
+                <p class="done-text">Make MLOG <span><img class="icon-mini" src="media/next.svg"></span></p>
+            </div>
+        </a>
     </div>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="drag.js"></script>
