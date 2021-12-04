@@ -49,6 +49,7 @@ body {
 
 .orange {
     color: #E57510;
+    font-weight: bold;
 }
 
 .icon-s {
@@ -268,7 +269,7 @@ input[type="file"] {
 
 .hline {
     width: 100%;
-    background: lightgrey;
+    background: rgba(254, 251, 249, .2);
     height: 1px;
     margin: 24px 0;
 }
@@ -286,14 +287,14 @@ input[type="file"] {
 
 .slogan {
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 0px;
     margin-top: 36px;
     /* margin-left: 24px; */
 }
 
 .slogan-b {
-    /* font-family: 'Smooch', cursive; */
+    font-family: 'Times New Roman', Times, serif;
     font-size: 72px;
     margin-top: 0px;
     color: #E57510;
@@ -309,4 +310,11 @@ input[type="file"] {
     /* margin-right: 8px; */
     /* font-size: 18px; */
     font-weight: 400;
+}
+
+.footer {
+    opacity: .2;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: -24px;
 }

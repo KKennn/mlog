@@ -30,9 +30,6 @@ function dragStart(e) {
     console.log(e.target.id);
     setTimeout(() => {
         e.target.classList.add("hide");
-        if (e.target.classList.contains("box")) e.target.classList.add('drag-over');
-        if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.add('drag-over');
-        if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.add('drag-over');
     }, 0);
 }
 

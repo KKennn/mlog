@@ -288,3 +288,13 @@ textarea {
 
 /* right: 0;
 } */
+
+.download {
+    margin-top: -4px;
+}
+
+.text-button {
+    color: #E57510;
+    text-align: center;
+    margin: 24px auto;
+}
