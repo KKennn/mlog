@@ -133,10 +133,11 @@ textarea {
 }
 
 .gridscroll {
-    display: inline-block;
+    /* display: inline-block; */
     overflow-y: hidden;
     height: 72px;
-    margin-right: 84px;
+    margin-right: -32px;
+    padding-right: 40px;
 }
 
 .item {
@@ -254,7 +255,7 @@ textarea {
 
 .next-step {
     background: #181410;
-    box-shadow: 0 0px 10px rgba(254, 251, 249, .3);
+    box-shadow: 0 -6px 24px rgba(38, 35, 33);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -280,14 +281,6 @@ textarea {
 .icon-mini {
     width: 12px;
 }
-
-
-/* .log-button {
-    position: sticky; */
-
-
-/* right: 0;
-} */
 
 .download {
     margin-top: -4px;
