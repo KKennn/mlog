@@ -70,7 +70,7 @@
 }
 
 .write-box {
-    margin: 12px;
+    margin: 8px 12px 12px 12px;
 }
 
 textarea {
@@ -136,6 +136,7 @@ textarea {
     display: inline-block;
     overflow-y: hidden;
     height: 72px;
+    margin-right: 84px;
 }
 
 .item {
@@ -231,7 +232,7 @@ textarea {
 }
 
 .done-button {
-    margin: 12px 12px 12px auto;
+    margin: 12px 12px 8px auto;
     width: fit-content;
     height: fit-content;
     background: #E57510;
@@ -246,8 +247,9 @@ textarea {
 
 .done-text {
     vertical-align: center;
-    padding: 12px 16px;
+    padding: 10px 16px;
     color: inherit;
+    margin-bottom: 10px;
 }
 
 .next-step {
@@ -272,9 +274,17 @@ textarea {
 .back {
     text-decoration: none;
     color: rgba(254, 251, 249, .5);
-    text-decoration: underline 4px;
+    text-decoration: underline 2px;
 }
 
 .icon-mini {
     width: 12px;
 }
+
+
+/* .log-button {
+    position: sticky; */
+
+
+/* right: 0;
+} */

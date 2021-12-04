@@ -30,6 +30,9 @@ function dragStart(e) {
     console.log(e.target.id);
     setTimeout(() => {
         e.target.classList.add("hide");
+        if (e.target.classList.contains("box")) e.target.classList.add('drag-over');
+        if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.add('drag-over');
+        if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.add('drag-over');
     }, 0);
 }
 
@@ -69,6 +72,8 @@ function drop(e) {
     // get the draggable element
     const id = e.dataTransfer.getData('text/plain');
     const draggable = document.getElementById(id);
+    if (draggable.parentElement.childElementCount <= 1)
+        draggable.parentElement.parentElement.classList.add('hide');
     console.log(e.target);
     // add it to the drop target
     if (e.target.classList.contains("box")) e.target.children[0].appendChild(draggable);
@@ -76,6 +81,7 @@ function drop(e) {
     if (e.target.classList.contains("item")) e.target.parentElement.appendChild(draggable);
     // display the draggable element
     draggable.classList.remove('hide');
+    console.log(draggable);
 
 }
 

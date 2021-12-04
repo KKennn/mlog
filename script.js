@@ -30,7 +30,7 @@ function hideDiv() {
         if (userData[i][1] == thisId) {
             if (saveData.value != '') {
                 userData[i] = [saveData.value, thisId];
-                document.getElementById(thisId).children[0].children[0].style.fill = "rgba(38,35,33,.6)";
+                document.getElementById(thisId).children[0].children[0].style.fill = "#32302E";
                 document.getElementById(thisId).children[1].innerHTML = "Edit";
             }
             break;
