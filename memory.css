@@ -229,7 +229,7 @@ textarea {
 
 .instruction {
     margin-top: 8px;
-    opacity: .3;
+    opacity: .4;
 }
 
 .done-button {
@@ -290,4 +290,10 @@ textarea {
     color: #E57510;
     text-align: center;
     margin: 24px auto;
+}
+
+.mlog {
+    width: 100%;
+    opacity: .9;
+    box-shadow: 0 0 8px rgba(233, 138, 52, .5)
 }

@@ -3,7 +3,9 @@ var questions = [
     "How was the smell when you were there?",
     "Were there any interesting visual patterns?",
     "What was in the air?",
-    "How are the people outside of these photos?"
+    "How are the people outside of these photos?",
+    "What did it remind you?",
+    "Did it trigger some emotions?"
 ]
 
 var userData = [];
@@ -14,7 +16,7 @@ var complete = false;
 
 function showDiv(groupId) {
     document.querySelector('.ask-input').style.display = "block";
-    saveData.placeholder = "Log some memories …" + "\n" + "Inspo: " + questions[parseInt(Math.random() * questions.length)];
+    saveData.placeholder = "Log some memories …" + "\n" + "Inspiration: " + questions[parseInt(Math.random() * questions.length)];
     thisId = groupId;
     for (var i = 0; i < userData.length; i++) {
         if (userData[i][1] == thisId) {
