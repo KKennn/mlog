@@ -318,3 +318,31 @@ input[type="file"] {
     text-align: center;
     margin-top: -24px;
 }
+
+.quote-imgs-thumbs {
+    /* background: #eee; */
+    /* border: 1px solid #ccc; */
+    border-radius: 0.25rem;
+    margin: 1.5rem 20px;
+    /* padding: 0.75rem; */
+}
+
+.quote-imgs-thumbs--hidden {
+    display: none;
+}
+
+.img-preview-thumb {
+    background: #fff;
+    border: 1px solid #777;
+    border-radius: 4px;
+    /* box-shadow: 0.125rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.12); */
+    margin-right: 8px;
+    width: 72px;
+    height: 72px;
+    /* padding: 0.25rem; */
+    /* background-size: cover; */
+    object-fit: cover;
+    /* Do not scale the image */
+    object-position: center;
+    /* Center the image within the element */
+}

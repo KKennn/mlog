@@ -5,8 +5,10 @@ var questions = [
     "What was in the air?",
     "How are the people outside of these photos?",
     "What did it remind you?",
-    "Did it trigger some emotions?"
+    "Did it trigger some emotions?",
+    "What acoustic details will you use to describe this memory?"
 ]
+
 
 var userData = [];
 userData.push(["test", "test"]);
@@ -25,6 +27,41 @@ function showDiv(groupId) {
         }
     }
 }
+
+var repo = [];
+
+var imgUpload = document.getElementById('file-upload'),
+    imgPreview = document.getElementById('img_preview'),
+    totalFiles, previewTitle, previewTitleText, img;
+
+imgUpload.addEventListener('change', previewImgs, false);
+
+function previewImgs(event) {
+    totalFiles = imgUpload.files.length;
+
+    // repo += imgUpload.files;
+    console.log(imgUpload.files[0]);
+
+    if (!!totalFiles) {
+        imgPreview.classList.remove('quote-imgs-thumbs--hidden');
+        previewTitle = document.createElement('p');
+        previewTitle.style.fontWeight = 'bold';
+        previewTitleText = document.createTextNode(totalFiles + ' Total Images Selected');
+        previewTitle.appendChild(previewTitleText);
+        imgPreview.appendChild(previewTitle);
+    }
+
+    for (var i = 0; i < totalFiles; i++) {
+        img = document.createElement('img');
+        img.src = URL.createObjectURL(event.target.files[i]);
+        img.classList.add('img-preview-thumb');
+        imgPreview.appendChild(img);
+        repo.push(img);
+        console.log(repo);
+        // imgPreview.appendChild(imgUpload.files[0]);
+    }
+}
+
 
 function hideDiv() {
     document.querySelector('.ask-input').style.display = "none";
