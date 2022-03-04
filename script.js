@@ -59,7 +59,7 @@ function previewImgs(event) {
     document.getElementById('page-2').style.display = 'block';
 }
 
-for (let k = 0; k <= repo.length; k++) {
+for (let k = 1; k <= 15; k++) {
     var img = document.createElement('div');
     img.setAttribute('class', 'item');
     img.setAttribute('draggable', 'true');
@@ -68,7 +68,7 @@ for (let k = 0; k <= repo.length; k++) {
     img.style.backgroundImage = 'url(media/0' + k + '.jpg)';
     img.style.backgroundSize = 'cover';
     var container = document.getElementsByClassName('gridscroll');
-    container[parseInt((k) / 3)].appendChild(img);
+    container[parseInt((k - 1) / 3)].appendChild(img);
 }
 
 // select the item element
