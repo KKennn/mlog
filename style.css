@@ -346,3 +346,19 @@ input[type="file"] {
     object-position: center;
     /* Center the image within the element */
 }
+
+#page-1 {
+    display: block;
+}
+
+#page-1-5 {
+    display: none;
+}
+
+#page-2 {
+    display: none;
+}
+
+#page-3 {
+    display: none;
+}
