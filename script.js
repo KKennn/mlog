@@ -28,60 +28,93 @@ function showDiv(groupId) {
     }
 }
 
-var imgUpload = document.getElementById('file-upload'),
-    imgPreview = document.getElementById('img_preview'),
-    totalFiles, previewTitle, previewTitleText, img;
+let imgUpload = document.getElementById('file-upload'),
+    totalFiles;
 
 imgUpload.addEventListener('change', previewImgs, false);
 
 function previewImgs(event) {
     totalFiles = imgUpload.files.length;
 
-    console.log(imgUpload.files[0]);
+    for (let i = 0; i < totalFiles; i++) {
+        let tile = document.createElement('div');
+        tile.setAttribute('class', 'item');
+        tile.setAttribute('draggable', 'true');
+        tile.style.width = '72px';
+        tile.style.height = '72px';
+        // tile.style.backgroundImage = URL.createObjectURL(event.target.files[i]);
+        tile.style.backgroundSize = 'cover';
 
-    if (!!totalFiles) {
-        imgPreview.classList.remove('quote-imgs-thumbs--hidden');
-        previewTitle = document.createElement('p');
-        previewTitle.style.fontWeight = 'bold';
-        previewTitleText = document.createTextNode(totalFiles + ' Total Images Selected');
-        previewTitle.appendChild(previewTitleText);
-        imgPreview.appendChild(previewTitle);
-    }
+        let reader = new FileReader();
+        reader.addEventListener("load", () => {
+            tile.style.backgroundImage = `url(${reader.result})`;
+        });
+        reader.readAsDataURL(this.files[i]);
 
-    for (var i = 0; i < totalFiles; i++) {
-        img = document.createElement('img');
-        img.src = URL.createObjectURL(event.target.files[i]);
-        img.classList.add('img-preview-thumb');
-        imgPreview.appendChild(img);
-        // imgPreview.appendChild(imgUpload.files[0]);
+        tile.setAttribute("id", i);
+        tile.addEventListener('dragstart', dragStart);
+
+        let container = document.getElementsByClassName('gridscroll');
+        container[parseInt(i / 3)].appendChild(tile);
+
+        // if (file) {
+        //     reader.readAsDataURL(file);
+        // }
+
+        // var preview = document.querySelector('#preview');
+        // var files = document.querySelector('input[type=file]').files;
+
+        // function readAndPreview(file) {
+        //     if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+        //         var reader = new FileReader();
+
+        //         reader.addEventListener("load", function() {
+        //             var image = new Image();
+        //             image.height = 100;
+        //             image.title = file.name;
+        //             image.src = this.result;
+        //             container.appendChild(image);
+        //         }, false);
+
+        //         reader.readAsDataURL(file);
+        //     }
+
+        // }
+
+        // if (files) {
+        //     [].forEach.call(files, readAndPreview);
+        // }
+
     }
     document.getElementById('page-1').style.display = 'none';
     document.getElementById('page-2').style.display = 'block';
+
+
 }
 
-for (let k = 1; k <= 15; k++) {
-    var img = document.createElement('div');
-    img.setAttribute('class', 'item');
-    img.setAttribute('draggable', 'true');
-    img.style.width = '72px';
-    img.style.height = '72px';
-    img.style.backgroundImage = 'url(media/0' + k + '.jpg)';
-    img.style.backgroundSize = 'cover';
-    var container = document.getElementsByClassName('gridscroll');
-    container[parseInt((k - 1) / 3)].appendChild(img);
-}
+// for (let k = 1; k <= 15; k++) {
+//     var img = document.createElement('div');
+//     img.setAttribute('class', 'item');
+//     img.setAttribute('draggable', 'true');
+//     img.style.width = '72px';
+//     img.style.height = '72px';
+//     img.style.backgroundImage = 'url(media/0' + k + '.jpg)';
+//     img.style.backgroundSize = 'cover';
+//     var container = document.getElementsByClassName('gridscroll');
+//     container[parseInt((k - 1) / 3)].appendChild(img);
+// }
 
 // select the item element
-const items = document.querySelectorAll('.item');
+// const items = document.querySelectorAll('.item');
 
-var i = 1;
+// var i = 1;
 
 // attach the dragstart event handler
-items.forEach(item => {
-    item.setAttribute("id", i);
-    item.addEventListener('dragstart', dragStart);
-    i++;
-})
+// items.forEach(item => {
+//     item.setAttribute("id", i);
+//     item.addEventListener('dragstart', dragStart);
+//     i++;
+// })
 
 // handle the dragstart
 
