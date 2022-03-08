@@ -68,7 +68,7 @@
 
         <div class="drop-targets">
 
-            <div class="scroll-container box">
+            <!-- <div class="scroll-container box">
                 <div class="gridscroll"></div>
                 <div class="log-button" id="group1" onclick="showDiv(this.id)">
                     <svg height="96" width="96" class="write">
@@ -121,7 +121,7 @@
                     <p class="write-text">Log</p>
                     <img src="media/log.svg" class="write-icon">
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -146,15 +146,14 @@ Inspiration: "></textarea>
 
 
 
-        <a href="index.html" class="back">Go back</a>
-        <a href="mlog.html" class="back">Next</a>
+        <!-- <a href="index.html" class="back">Go back</a>
+        <a href="mlog.html" class="back">Next</a> -->
+        <!-- <div class="add" onclick="newGroup()">Add a new Group</div> -->
         <div class="space"></div>
         <div class="next-step">
-            <a href="mlog.html">
-                <div class="done-button">
-                    <p class="done-text">Make MLOG <span><img class="icon-mini" src="media/next.svg"></span></p>
-                </div>
-            </a>
+            <div class="done-button" onclick="generate()">
+                <p class="done-text">Make MLOG <span><img class="icon-mini" src="media/next.svg"></span></p>
+            </div>
         </div>
     </div>
 
@@ -166,15 +165,15 @@ Inspiration: "></textarea>
             <img class="icon-s download" src="media/download.svg">
             <p class="fa fa-cloud-upload">Download MLOG</p>
           </label>
-        <a href="memory.html">
-            <div class="text-button">Back to Editing</div>
-        </a>
+        <!-- <a href="memory.html"> -->
+        <div class="text-button" onclick="goBack()">Back to Editing</div>
+        <!-- </a> -->
         <div class="hline"></div>
-        <a href="index.html">
+        <!-- <a href="index.html">
             <div class="text-button">
                 <img src="media/logo.svg" class="logo" style="width: 80px;">
             </div>
-        </a>
+        </a> -->
         <p class="footer">©Ken Chen 2021</p>
     </div>
 
