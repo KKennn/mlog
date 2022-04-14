@@ -70,10 +70,12 @@ function newGroup(d) {
 
 imgUpload.addEventListener('change', previewImgs, false);
 
+let p = 0;
+
 function previewImgs(event) {
     totalFiles = imgUpload.files.length;
 
-    for (let p = 0; p < totalFiles / 3; p++) {
+    for (; p < totalFiles / 3; p++) {
         console.log(p);
         newGroup(p);
     }
@@ -151,6 +153,12 @@ let items = document.querySelectorAll('.item');
 
 var i = 1;
 
+let create = document.getElementById("new-group");
+create.addEventListener('dragenter', dragEnter)
+create.addEventListener('dragover', dragOver);
+create.addEventListener('dragleave', dragLeave);
+create.addEventListener('drop', drop);
+
 // attach the dragstart event handler
 items.forEach(item => {
     item.setAttribute("id", i);
@@ -167,6 +175,7 @@ function dragStart(e) {
     setTimeout(() => {
         e.target.classList.add("hide");
     }, 0);
+    create.style.display = "block";
 }
 
 // let boxes = document.querySelectorAll('.box');
@@ -183,6 +192,7 @@ function dragEnter(e) {
     if (e.target.classList.contains("box")) e.target.classList.add('drag-over');
     if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.add('drag-over');
     if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.add('drag-over');
+    if (e.target.classList.contains("create")) e.target.classList.add('drag-over');
 }
 
 function dragOver(e) {
@@ -190,32 +200,40 @@ function dragOver(e) {
     if (e.target.classList.contains("box")) e.target.classList.add('drag-over');
     if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.add('drag-over');
     if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.add('drag-over');
+    if (e.target.classList.contains("create")) e.target.classList.add('drag-over');
 }
 
 function dragLeave(e) {
     if (e.target.classList.contains("box")) e.target.classList.remove('drag-over');
     if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.remove('drag-over');
     if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.remove('drag-over');
+    if (e.target.classList.contains("create")) e.target.classList.remove('drag-over');
 }
 
 function drop(e) {
     if (e.target.classList.contains("box")) e.target.classList.remove('drag-over');
     if (e.target.classList.contains("gridscroll")) e.target.parentElement.classList.remove('drag-over');
     if (e.target.classList.contains("item")) e.target.parentElement.parentElement.classList.remove('drag-over');
+    if (e.target.classList.contains("create")) e.target.classList.remove('drag-over');
     // get the draggable element
     const id = e.dataTransfer.getData('text/plain');
     const draggable = document.getElementById(id);
-    if (draggable.parentElement.childElementCount <= 1)
-        draggable.parentElement.parentElement.classList.add('hide');
+    if (draggable.parentElement.childElementCount <= 1) draggable.parentElement.parentElement.classList.add('hide');
     console.log(e.target);
     // add it to the drop target
     if (e.target.classList.contains("box")) e.target.children[0].appendChild(draggable);
     if (e.target.classList.contains("gridscroll")) e.target.appendChild(draggable);
     if (e.target.classList.contains("item")) e.target.parentElement.appendChild(draggable);
+    if (e.target.classList.contains("create")) {
+        p++;
+        newGroup(p);
+        let tempID = "group" + (p + 1);
+        document.getElementById(tempID).parentElement.children[0].appendChild(draggable);
+    }
     // display the draggable element
     draggable.classList.remove('hide');
     console.log(draggable);
-
+    create.style.display = "none";
 }
 
 // var logBtns = document.getElementsByClassName("write");

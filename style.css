@@ -26,6 +26,10 @@ body {
     max-width: 720px;
 }
 
+.homepage {
+    margin: 20px 0;
+}
+
 .home-card {
     height: 200px;
     margin: 12px;
@@ -50,7 +54,7 @@ body {
     width: fit-content;
     border-radius: 8px;
     vertical-align: middle;
-    margin-top: 36px;
+    margin-top: 32px;
 }
 
 .orange {
@@ -281,22 +285,73 @@ input[type="file"] {
 }
 
 .logo {
-    width: 120px;
-    margin: 12px auto;
+    width: 96px;
+    margin: 16px 40px;
+}
+
+.small-text {
+    margin-left: 40px;
+    font-size: 12px;
+    margin-top: -20px;
+    opacity: .5;
+}
+
+.feature {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: -80px;
 }
 
 .header {
     width: 100%;
-    padding: 0 auto;
+    padding: 0 0;
+    /* text-align: center; */
+}
+
+.subtitle-block {
+    background: #fdf4ee;
+    /* rgb(243, 200, 12) */
+    padding: 12px;
+    margin-top: -4px;
+}
+
+.step {
     text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    -webkit-text-stroke-width: 1xpx;
+    -webkit-text-stroke-color: #FEFBF9;
+}
+
+.emoji {
+    font-size: 80px;
+    margin-top: 48px;
+    text-align: center;
+    margin-bottom: -32px;
+    width: auto;
+}
+
+.description {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 0 48px;
+    opacity: .5;
+    margin-top: -12px;
+}
+
+.blue {
+    color: #1080e5;
+    font-weight: bolder;
 }
 
 .slogan {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 900;
     margin-bottom: 0px;
     margin-top: 36px;
-    /* margin-left: 24px; */
+    opacity: .9;
 }
 
 .slogan-b {
@@ -305,7 +360,7 @@ input[type="file"] {
     margin-top: 0px;
     color: #E57510;
     /* margin-left: 24px; */
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 24px;
     font-weight: bolder;
 }
@@ -314,8 +369,22 @@ input[type="file"] {
     text-align: center;
     /* margin-left: 8px; */
     /* margin-right: 8px; */
-    /* font-size: 18px; */
-    font-weight: 400;
+    font-size: 32px;
+    font-weight: 800;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 24px;
+    color: #2f2b29;
+    /* opacity: .6; */
+}
+
+.subtitle1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.subtitle2 {
+    margin-top: 24px;
 }
 
 .footer {
@@ -701,4 +770,21 @@ textarea {
 
 #final-mlog {
     background: #262321;
+}
+
+#new-group {
+    height: 200px;
+    width: 200px;
+    background-color: #E57510;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 40px 40px;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    transition: .3s;
 }

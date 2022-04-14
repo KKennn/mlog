@@ -10,32 +10,57 @@
 </head>
 
 <body>
-    <div class="container" id="page-1">
+    <div class="container homepage" id="page-1">
         <!-- <a href="memory.html"> -->
         <div class="header">
             <img src="media/logo.svg" class="logo">
         </div>
+        <p class=small-text>New Form of<br>Memory</p>
+        <img src="media/mockup.png" class="feature">
         <!-- </a> -->
-        <p class="slogan">NEW WAY OF </p>
-        <p class="slogan-b">Memory</p>
-        <p class="subtitle">Have lots of photos after a memorable event?</p>
-        <p class="subtitle">Make them into a unique <span class="orange">Memory Log</span></p>
-        <!-- <a id="myBtn"> -->
-        <!-- <div id="home-add-button">
+        <!-- <p class="slogan">NEW WAY OF </p>
+        <p class="slogan-b">Memory</p> -->
+        <div class="subtitle-block">
+            <p class="subtitle subtitle1">Took many photos for <br><span class="orange">a memorable event?</span></p>
+
+
+            <!-- <a id="myBtn"> -->
+            <!-- <div id="home-add-button">
             <img class="icon-s" src="media/upload.svg">
             <p>Select photos for this memory</p>
 
         </div> -->
 
 
-        <!-- </a> -->
+            <!-- </a> -->
+            <label for="file-upload" id="home-add-button">
+            <img class="icon-s" src="media/upload.svg">
+            <p class="fa fa-cloud-upload">Select photos for a memory</p>
+          </label>
+            <input id="file-upload" type="file" multiple/>
+            <p class="subtitle subtitle2">Put them here to make a unique <span class="orange">MemoryLog!</span></p>
+        </div>
+        <p class="slogan">The process is simple.</p>
+        <div class="emoji">👆</div>
+        <p class="step">Step 01 - Drag</p>
+        <p class="description">Organize photos into groups as your memory intuits.</p>
+        <div class="emoji">✍️</div>
+        <p class="step">Step 02 - Log</p>
+        <p class="description">Look back on your memory and write upon some reflective prompts.</p>
+        <div class="emoji">🙌</div>
+        <p class="step">Step 03 - Generate</p>
+        <p class="description">Sit tight and let us generate a unique MLOG for your special memory.</p>
+        <br>
+        <p class="slogan">Got it? Let's begin!</p>
         <label for="file-upload" id="home-add-button">
             <img class="icon-s" src="media/upload.svg">
             <p class="fa fa-cloud-upload">Select photos for a memory</p>
           </label>
         <input id="file-upload" type="file" multiple/>
 
-
+        <div class="hline"></div>
+        <br>
+        <p class="footer">©Ken Chen 2022</p>
         <!-- <div class="home-card" id="camping">
             <div class="home-card-title">
                 Catskills Camping
@@ -64,7 +89,7 @@
 
     <div class="container" id="page-2">
         <p class="instruction-title">Drag Around. Then Log.</p>
-        <p class="instruction">You can drag photos between groups and log some memories in each group. After logging in every group you can make your MLOG!</p>
+        <p class="instruction">You can drag photos between groups and log some memory in each group. You can make your MLOG after logging in every group.</p>
 
         <div class="drop-targets">
 
@@ -123,10 +148,11 @@
                 </div>
             </div> -->
 
-
-
         </div>
 
+        <div id="new-group" class="create">
+            Put in a <br>New Group
+        </div>
 
         <div class="ask-input">
             <!-- <div class="write-done" onclick="hideDiv()">
