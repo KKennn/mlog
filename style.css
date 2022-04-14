@@ -617,6 +617,23 @@ textarea {
 
 .done-button:hover {
     background: #E98A34;
+    cursor: pointer;
+}
+
+.make-button {
+    margin-top: 12px;
+    margin-right: 8px;
+    width: fit-content;
+    height: fit-content;
+    background: #E57510;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.make-button:hover {
+    background: #E98A34;
+    cursor: pointer;
 }
 
 .done-text {
@@ -663,10 +680,25 @@ textarea {
     color: #E57510;
     text-align: center;
     margin: 24px auto;
+    cursor: pointer;
 }
 
 .mlog {
     width: 100%;
     opacity: .9;
     box-shadow: 0 0 8px rgba(233, 138, 52, .5)
+}
+
+.mlog-para {
+    opacity: .9;
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+
+.mlog-images {
+    width: 100%;
+}
+
+#final-mlog {
+    background: #262321;
 }

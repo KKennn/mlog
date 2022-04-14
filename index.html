@@ -151,7 +151,7 @@ Inspiration: "></textarea>
         <!-- <div class="add" onclick="newGroup()">Add a new Group</div> -->
         <div class="space"></div>
         <div class="next-step">
-            <div class="done-button" onclick="generate()">
+            <div class="make-button" onclick="generate()">
                 <p class="done-text">Make MLOG <span><img class="icon-mini" src="media/next.svg"></span></p>
             </div>
         </div>
@@ -159,14 +159,21 @@ Inspiration: "></textarea>
 
     <div class="container" id="page-3">
         <p class="instruction-title">Here is your MLOG</p>
-        <p class="instruction">This is a creative manifestation of your memory with photos and meaningful thoughts.<br>Keep, treasure and share!</p>
-        <img class="mlog" src="media/MLOG-example.png">
-        <label for="file-upload" id="home-add-button">
+        <p class="instruction">This is a creative manifestation of your memory with photos and meaningful thoughts. Keep, Treasure and Share!</p>
+        <label id="home-add-button" onclick="doCapture();">
+            <img class="icon-s download" src="media/download.svg">
+            <p class="fa fa-cloud-upload">Download MLOG</p>
+          </label>
+        <div id="final-mlog">
+
+        </div>
+
+        <label id="home-add-button" onclick="doCapture();">
             <img class="icon-s download" src="media/download.svg">
             <p class="fa fa-cloud-upload">Download MLOG</p>
           </label>
         <!-- <a href="memory.html"> -->
-        <div class="text-button" onclick="goBack()">Back to Editing</div>
+        <!-- <div class="text-button" onclick="goBack()">Back to Editing</div> -->
         <!-- </a> -->
         <div class="hline"></div>
         <!-- <a href="index.html">
@@ -174,7 +181,8 @@ Inspiration: "></textarea>
                 <img src="media/logo.svg" class="logo" style="width: 80px;">
             </div>
         </a> -->
-        <p class="footer">©Ken Chen 2021</p>
+        <br>
+        <p class="footer">©Ken Chen 2022</p>
     </div>
 
     <!-- The Modal -->
@@ -215,6 +223,7 @@ Inspiration: "></textarea>
         </div>
 
     </div>
+    <script type="text/javascript" src="html2canvas.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 

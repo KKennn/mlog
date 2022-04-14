@@ -9,10 +9,30 @@ var questions = [
     "What acoustic details will you use to describe this memory?"
 ]
 
+let finalMlog = document.getElementById('final-mlog');
+
 function generate() {
     document.getElementById('page-2').style.display = 'none';
     document.getElementById('page-3').style.display = 'block';
     scroll(0, 0);
+    for (let g = 1; g < userData.length; g++) {
+        if (document.getElementById(userData[g][1]).parentElement.classList.contains("hide")) {
+            break;
+        } else {
+            let para = document.createElement("p")
+            para.classList.add("mlog-para");
+            para.innerHTML = userData[g][0];
+
+            let images = document.createElement("div");
+            images.classList.add('mlog-images');
+            for (let p = 0; p < document.getElementById(userData[g][1]).parentElement.children[0].childElementCount; p++) {
+                images.appendChild(document.getElementById(userData[g][1]).parentElement.children[0].children[p]);
+            }
+
+            finalMlog.appendChild(para);
+            finalMlog.appendChild(images);
+        }
+    }
 }
 
 function goBack() {
@@ -20,8 +40,6 @@ function goBack() {
     document.getElementById('page-2').style.display = 'block';
     scroll(0, 0);
 }
-
-
 
 let imgUpload = document.getElementById('file-upload'),
     totalFiles;
@@ -55,7 +73,7 @@ imgUpload.addEventListener('change', previewImgs, false);
 function previewImgs(event) {
     totalFiles = imgUpload.files.length;
 
-    for (let p = 0; p <= totalFiles / 3; p++) {
+    for (let p = 0; p < totalFiles / 3; p++) {
         console.log(p);
         newGroup(p);
     }
@@ -115,8 +133,6 @@ function previewImgs(event) {
     scroll(0, 0);
 
 }
-
-
 
 // for (let k = 1; k <= 15; k++) {
 //     var img = document.createElement('div');
@@ -265,6 +281,22 @@ function hideDiv() {
         document.querySelector(".next-step").style.display = "none";
         document.querySelector(".space").style.display = "none";
     }
+}
+
+function doCapture() {
+    html2canvas(document.getElementById("final-mlog")).then(function(canvas) {
+        download(canvas.toDataURL("image/jpeg", 1));
+    });
+}
+
+function download(source) {
+    const fileName = source.split('/').pop();
+    var el = document.createElement("a");
+    el.setAttribute("href", source);
+    el.setAttribute("download", fileName);
+    document.body.appendChild(el);
+    el.click();
+    el.remove();
 }
 
 // // Get the modal
