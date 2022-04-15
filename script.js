@@ -305,7 +305,7 @@ function hideDiv() {
 
 function doCapture() {
     html2canvas(document.getElementById("final-mlog")).then(function(canvas) {
-        download(canvas.toDataURL("image/jpeg", 1));
+        download(canvas.toDataURL("image/jpeg", .9));
     });
 }
 
