@@ -12,6 +12,8 @@ var questions = [
 let finalMlog = document.getElementById('final-mlog');
 
 function generate() {
+    document.querySelector(".next-step").style.display = "none";
+    document.querySelector(".space").style.display = "none";
     document.getElementById('page-2').style.display = 'none';
     document.getElementById('page-3').style.display = 'block';
     scroll(0, 0);

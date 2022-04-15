@@ -692,6 +692,7 @@ textarea {
 .make-button {
     margin-top: 12px;
     margin-right: 8px;
+    margin-left: 12px;
     width: fit-content;
     height: fit-content;
     background: #E57510;
@@ -722,6 +723,7 @@ textarea {
     z-index: 8;
     /* padding-bottom: 12px; */
     display: none;
+    /* left: -6px; */
 }
 
 .space {
@@ -787,4 +789,5 @@ textarea {
     transform: translate(-50%, 0);
     display: none;
     transition: .3s;
+    z-index: 10;
 }
