@@ -670,8 +670,16 @@ textarea {
 }
 
 .instruction {
-    margin-top: 8px;
+    margin-top: 16px;
+    margin-bottom: 12px;
     opacity: .4;
+}
+
+.instruction-sub {
+    margin-top: 32px;
+    opacity: .6;
+    font-weight: 900;
+    /* text-align: center; */
 }
 
 .done-button {
@@ -763,15 +771,19 @@ textarea {
 .mlog-para {
     opacity: .9;
     margin-top: 24px;
-    margin-bottom: 4px;
+    margin-bottom: 16px;
 }
 
 .mlog-images {
     width: 100%;
+    margin-bottom: 32px;
 }
 
 #final-mlog {
     background: #262321;
+    border: #262321 solid 1px;
+    padding: 8px;
+    position: relative;
 }
 
 #new-group {
@@ -784,10 +796,21 @@ textarea {
     text-align: center;
     font-weight: bold;
     position: fixed;
-    bottom: -100px;
+    bottom: -200px;
     left: 50%;
     transform: translate(-50%, 0);
-    display: none;
-    transition: .3s;
+    /* display: none; */
+    transition: .3s ease-in-out;
     z-index: 10;
+}
+
+#mlog-title {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.final-mlog-image {
+    width: 100%;
+    position: absolute;
+    top: 0;
 }

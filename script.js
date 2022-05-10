@@ -11,6 +11,11 @@ var questions = [
 
 let finalMlog = document.getElementById('final-mlog');
 
+let mlogTitle = document.getElementById('mlog-title');
+const date = new Date();
+const n = date.toDateString();
+mlogTitle.innerText += n;
+
 function generate() {
     document.querySelector(".next-step").style.display = "none";
     document.querySelector(".space").style.display = "none";
@@ -27,14 +32,23 @@ function generate() {
 
             let images = document.createElement("div");
             images.classList.add('mlog-images');
+            console.log(document.getElementById(userData[g][1]).parentElement.children[0].childElementCount);
             for (let p = 0; p < document.getElementById(userData[g][1]).parentElement.children[0].childElementCount; p++) {
                 images.appendChild(document.getElementById(userData[g][1]).parentElement.children[0].children[p]);
             }
 
             finalMlog.appendChild(para);
             finalMlog.appendChild(images);
+
+            console.log(document.querySelector(".mlog-images").childElementCount)
         }
     }
+    html2canvas(document.getElementById("final-mlog")).then(function(canvas) {
+        let myMlog = document.createElement("img");
+        myMlog.classList.add('final-mlog-image');
+        myMlog.src = canvas.toDataURL("image/jpeg", .9);
+        finalMlog.appendChild(myMlog);
+    });
 }
 
 function goBack() {
@@ -177,7 +191,8 @@ function dragStart(e) {
     setTimeout(() => {
         e.target.classList.add("hide");
     }, 0);
-    create.style.display = "block";
+    // create.style.display = "block";
+    create.style.bottom = "-100px";
 }
 
 // let boxes = document.querySelectorAll('.box');
@@ -235,7 +250,8 @@ function drop(e) {
     // display the draggable element
     draggable.classList.remove('hide');
     console.log(draggable);
-    create.style.display = "none";
+    // create.style.display = "none";
+    create.style.bottom = "-200px";
 }
 
 // var logBtns = document.getElementsByClassName("write");
