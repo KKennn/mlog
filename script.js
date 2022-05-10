@@ -33,7 +33,7 @@ function generate() {
             let images = document.createElement("div");
             images.classList.add('mlog-images');
             console.log(document.getElementById(userData[g][1]).parentElement.children[0].childElementCount);
-            for (let p = document.getElementById(userData[g][1]).parentElement.children[0].childElementCount; p >= 0; p--) {
+            for (let p = document.getElementById(userData[g][1]).parentElement.children[0].childElementCount - 1; p >= 0; p--) {
                 console.log("a");
                 let newImg = document.getElementById(userData[g][1]).parentElement.children[0].children[p];
                 images.appendChild(newImg);
